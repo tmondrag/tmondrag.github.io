@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Twisted Triangle</title>
+
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+
+void
+main()
+{
+    gl_Position = vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+
+void
+main()
+{
+    gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="twist0.js"></script>
+</head>   
+
+<body>
+<form>
+    <B>Tesselation</B> : <input id="tess" type="range" min="0" 
+                                max="8" step="1" value="7"></input>
+                         <input id="tessr" type="text" value="7" size="1"></input>
+    <br / >
+    <B>&theta;</B> : 0 <input id="theta" type="range" value="0.0"
+                                step="0.087266462599716478846184538424430635672143594427086272804859" 
+                                max="6.283185307179586476925286766559005768394338798750211641949889" 
+                                min="0.0" ></input> 2&pi;
+                         <input id="thetar" type="text" value="0.0"></input>
+    <br / >
+    <B>Twisting factor</B> : 0 <input type="range" id="tfact" value="1.0"
+                                        step = "0.01" max= "2.0"
+                                        min = "0.0"></input> 2
+                         <input id="tfactr" type="text" value="0.0"></input>
+</form>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<p>This triangle is isoceles and not centered</p>
+<a href="twist1.html">Twist a centered equilateral triangle instead</a>
+</body>
+</html>

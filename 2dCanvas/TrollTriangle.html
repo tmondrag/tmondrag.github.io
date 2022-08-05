@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All triangles are equilateral</title>
+
+    <style>
+      body {
+         background: #eeeeee;
+      }
+      
+      #canvas {
+         background: #ffffff;
+         cursor: crosshair;
+         margin-left: 10px;
+         margin-top: 10px;
+         -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+         -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+         box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+      }
+    </style>
+  </head>
+
+   <body>
+      <p>Youtube Channel <a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A">Numberphile</a> recently produced a video featuring Dr. Carlo H. S&eacute;quin, who presented a incomplete but flawed geometrical proof that all triangles are equilateral.</p>
+      <p>The proof is quite convincing:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Yajonhixy4g" frameborder="0" allowfullscreen></iframe>
+      <p>The claims about the lengths of the line segments in the diagram are mostly true, and the claims about congruent triangles are true. However, the proof falls apart if you attempt the same geometrical construction yourself.</p>
+      <p>The 2D HTML canvas toy below constructs the diagram automatically. Drag points A, B, and C around the canvas to change the lengths of triangle ABC's sides and attempt to construct the diagram in the video.</p>
+      <table>
+         <tbody>
+            <tr>
+               <td>
+                  <canvas id='canvas' width='600' height='300'>
+                     Canvas not supported
+                  </canvas>
+               </td>
+               <td>
+                  line AB: <div id='AB'></div>
+                  line AC: <div id='AC'></div>
+                  line AB*: <div id='ABstar'></div>
+                  line AC*: <div id='ACstar'></div>
+                  line XB*: <div id='XBstar'></div>
+                  line XC*: <div id='XCstar'></div>
+                  line XB: <div id='XB'></div>
+                  line XC: <div id='XC'></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p>The diagram in the video isn't even constructed using a special triangle. You won't find a special case where the construction in the video works, except for the special case where line AB and line AC are the same length anyhow.</p>
+      <p>The following video discusses the tricky construction of the diagram in the first video in more depth, if you are interested.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Ha3md1lQ7cQ" frameborder="0" allowfullscreen></iframe>
+    <script src = 'geometry.js'></script>
+    <script src = 'TrollTriangle.js'></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fColor;
+
+uniform mat4 modelView;
+uniform mat4 projection;
+
+void
+main()
+{
+    gl_Position = projection*modelView*vPosition;
+    fColor = vColor;
+}
+    </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+
+varying vec4 fColor;
+
+void
+main()
+{
+    gl_FragColor = fColor;
+}
+    </script>
+    <script type="text/javascript" src="../Common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="../Common/MV.js"></script>
+    <script type="text/javascript" src="maze1.js"></script>
+</head>
+<body>
+    <form>
+        Maze height: 
+        2<input id="nrows" type="range" max="100" min="2" step="1" value="10">
+        </input>100 
+        <input id="nrowsr" type="number" max="100" min="2" step="1" value="10">
+        </input>
+        <br />
+        Maze width:
+        2<input id="ncols" type="range" max="100" min="2" step="1" value="10">
+        </input>100 
+        <input id="ncolsr" type="number" max="100" min="2" step="1" value="10">
+        </input>
+        <br />
+        Corner to straight ratio:
+        Many corners<input id="cur2strrat0" type="range" max="0.99" min="0.01" step="0.01" value="0.5">
+        </input>Many straight halls 
+        <br />
+        <input id="regen" type="button" value="Re-generate maze"></input>
+        <!--<select id="persp">
+            <option value="0" selected="selected">orthogonal</option>
+            <option value="1" >perspective</option>
+        </select> -->
+    </form>
+    <div id="key">&nbsp;</div>
+    <p>Maze Navigation: Linear speed:<span id="speedr"></span><input id="speed" type="range" max="0.5" min="0.005" step="0.005" value="0.125"></input>
+    Turn speed:<span id="rspeedr"></span><input id="rspeed" type="range" max="0.05" min="0.0005" step="0.0005" value="0.0125"></input><br />
+    Move foward: "W" Move backward: "S" Move Left: "A" Turn Left: left arrow Move Right: "D" Turn Right: right arrow<br/>
+    Move to maze start: "Z" Move to maze end: "C"
+    <hr />
+    <canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
+</body>
+</html>
