@@ -15,3 +15,6 @@
 Snippets of interesting code I have found around the web
 * [JavaScript maze generation oneliner](stupidwebtricks/maze.html) - demonstrates
  randomized 2D **"**maze**"** generation using a very brief bit of Javascript originally authored by [Botond Bal&aacute;zs](https://twitter.com/botond_balazs)
+
+# Hexglobe idea 
+![the two basic subdivision schemes t=needed to implement a hexworld mesh](hexglobe_tiles.png)
