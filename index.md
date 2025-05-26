@@ -120,7 +120,7 @@ Physics and Astronomy Department kept for him.</p>
  manipulating 2D geometric proofs.
 
  # Other HTML toys
- * [Playlist generator](Playlist_generator.html) - An attempt to make the song playlist HTML generator first created by [wastintime.insanejournal.com](https://wastintime.insanejournal.com/profile) and posted in [asylums.insanejournal.com/rp_tutorials](https://asylums.insanejournal.com/rp_tutorials/) easier to use. [Original post link](https://asylums.insanejournal.com/rp_tutorials/81918.html#cutid1). 
+ * [Playlist generator](Playlist_generator.html) - An attempt to make the song playlist HTML generator first created by [wastintime.insanejournal.com](https://wastintime.insanejournal.com/profile) and posted in [asylums.insanejournal.com/rp_tutorials](https://asylums.insanejournal.com/rp_tutorials/) easier to use and customize. [Original post link](https://asylums.insanejournal.com/rp_tutorials/81918.html#cutid1). 
 
 # Found code
 Snippets of interesting code I have found around the web
