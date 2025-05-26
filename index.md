@@ -39,6 +39,7 @@ you are genuinely interested in me. I want to challenge your parsing abilities
 and test if you can finally correctly disregard that which is obviously a lie.</p>
 </details>
 
+
 ## Education and Skills I do have
 I have two Bachelor of Science degrees from the University of New Mexico.
 <details><summary>I first studied Physics and obtained my diploma in May 2008.
@@ -95,6 +96,7 @@ Physics and Astronomy Department kept for him.</p>
 <details><summary>Next, I studied Computer Engineering and obtained a second
  diploma in May 2014.</summary></details>
 
+
 # Publications
 ## Articles
  * Jeff Allen, Reena Patel, Tomas Mondragon, Oliver Taylor, **[Multiphysics simulations of uniaxial compression applied to various rock samples subject to microwave pretreatment](https://doi.org/10.1108/mmms-09-2023-0312)**. Published in Multidiscipline Modeling in Materials and Structures, 2 April 2024
@@ -116,6 +118,9 @@ Physics and Astronomy Department kept for him.</p>
  deceptively constructed flawed proof that all triangles are equilateral. A
  demonstration of the 2d HTML5 canvas and a geometry system for visualizing and
  manipulating 2D geometric proofs.
+
+ # Other HTML toys
+ * [Playlist generator](Playlist_generator.html) - An attempt to make the song playlist HTML generator first created by [wastintime.insanejournal.com](https://wastintime.insanejournal.com/profile) and posted in [asylums.insanejournal.com/rp_tutorials](https://asylums.insanejournal.com/rp_tutorials/) easier to use. [Original post link](https://asylums.insanejournal.com/rp_tutorials/81918.html#cutid1). 
 
 # Found code
 Snippets of interesting code I have found around the web

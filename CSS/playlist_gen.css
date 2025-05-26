@@ -1,0 +1,29 @@
+img.ijusericon {
+  vertical-align: bottom;
+  border: 0px none;
+  height:17pt;
+  width:17pt;
+}
+
+input {
+  border: 1px solid rgb(204 204 204);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 2px;
+}
+
+button.changeArray {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0px 0px;
+}
+
+button.changeArray:hover {color: red;}
+
+button.changeArray:focus {
+  outline: red solid 3px;
+  color: red;
+}
