@@ -119,7 +119,7 @@ Physics and Astronomy Department kept for him.</p>
  demonstration of the 2d HTML5 canvas and a geometry system for visualizing and
  manipulating 2D geometric proofs.
 
- # Other HTML toys:
+# Other HTML toys:
  * [Playlist generator](Playlist_generator.html) - An attempt to make the song playlist HTML generator first created by [wastintime.insanejournal.com](https://wastintime.insanejournal.com/profile) and posted in [asylums.insanejournal.com/rp_tutorials](https://asylums.insanejournal.com/rp_tutorials/) easier to use and customize. [Original post link](https://asylums.insanejournal.com/rp_tutorials/81918.html#cutid1). 
 
 # Found code
