@@ -1,8 +1,6 @@
 # Smooth Interpolation Weighting Functions
 Interpolating data in a domain in which data is only known for a number of points in the domain can be done with a linear weighting funtion, but that leaves sharp corners in the interpolated data where the known data sits. If this is undesirable, what would usually be required is that the interpolated data have zero derivative or gradient at the known data points.
 
-[[_TOC_]]
-
 ## Regulary spaced data
 ### 1-D
 A 1-D space with regularly spaced data points can be scaled up or down so that the space between data points is 1.0. Doing that, given any test point in between two known data points, the distance between the test point and either one of the nearest known data points is at most 1.0 and at least 0.0. The weighting function itself need to vary between 0.0 and 1.0, and it needs to lend more weight to data points that are closer to the test point than to data points that ar farther away. So, a smooth interpolation weighting function $f(x)$ would fit the constraints:
