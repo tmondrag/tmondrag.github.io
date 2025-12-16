@@ -72,7 +72,7 @@ $$
 }
 $$
 ### 2-D
-On a 2-D regularly spaced rectangular grid, the interpolation weighting function for 1-D spaces could be adequate when applied to the distance between a test point and the four nearest neighbors with know data. The centroid of the unit square is still less than one unit of distance away from the corners of the square. This is still true in 3-D, but in 4-D, the centroid of a unit hypercube is exactly one unit away from the corners of the hypercube. As the dimensionality of a reqularly spaced grid increases, the less justifiable it is to use the 1-D weighting functions, since the 1-d formula will only cover part of the unit hypercube. Instead, it might be better to figure out a weighting formula suited for each space that covers the whole unitary space, in this case the unit square.
+On a 2-D regularly spaced rectangular grid, the interpolation weighting function for 1-D spaces could be adequate when applied to the distance between a test point and the four nearest neighbors with known data. The centroid of the unit square is still less than one unit of distance away from the corners of the square. This is still true in 3-D, but in 4-D, the centroid of a unit hypercube is exactly one unit away from the corners of the hypercube. As the dimensionality of a reqularly spaced grid increases, the less justifiable it is to use the 1-D weighting functions, since the 1-d formula will only cover part of the unit hypercube. Instead, it might be better to figure out a weighting formula suited for each space that covers the whole unitary space, in this case the unit square.
 
 The edges of a unit square are 1-D spaces though, so maybe it is best if the weighting formula reduces to the 1-D formula along those edges
 $$\tag{8}
@@ -96,7 +96,7 @@ f(x,y) &=& (1 - 6x^5 + 15x^4 - 10x^3)(1 - 6y^5 + 15y^4 - 10y^3) \\
  \end{matrix}
 $$
 ### 3-D
-In 3-D space, a smooth integration weighting formula that covers the whole unit cube can be obtained by the same method as was used in the 2-D case to cover the unit cube
+In 3-D space, a smooth interpolation weighting formula that covers the whole unit cube can be obtained by the same method as was used in the 2-D case to cover the unit cube
 $$
 f(x,y,z) = (1 - 6x^5 + 15x^4 - 10x^3)(1 - 6y^5 + 15y^4 - 10y^3)(1 - 6z^5 + 15z^4 - 10z^3)
 $$
