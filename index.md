@@ -128,5 +128,13 @@ Snippets of interesting code I have found around the web
  randomized 2D **"**maze**"** generation using a very brief bit of Javascript
  originally authored by [Botond Bal&aacute;zs](https://twitter.com/botond_balazs)
 
+# MathematicalMusings
+
+This repository serves to formallize and archive some of mathematical ideas I am working on. This is to take advantage of the $\LaTeX$ rendering ability of Git Flavored Markdown and `MathJAX` as a scratchpad.
+
+My Github.io hosted pages specifically uses `MathJAX`to render a subset of $\LaTeX$. See the [documentation](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference) on the Math StackExchange for references on what it can render.
+
+- [Smooth Interpolation Weighting Functions](interpolation_weights.md)
+
 # Hexglobe idea
 ![the two basic subdivision schemes needed to implement a hexworld mesh](hexglobe_tiles.png)
