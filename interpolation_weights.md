@@ -15,7 +15,7 @@ $$
 
 These four constraints could be satisfied by a third degree polynomial
 $$\tag{2} 
-\begin{matrix*}[l]
+\begin{matrix}
  f(x)                              &=&  a_3 x^3 &+  a_2 x^2 &+ a_1 x &+ a_0 \\
  \dfrac{d f(x)}{d x} &=& 3a_3 x^2 &+ 2a_2 x   &+ a_1   & 
 \end{matrix}
@@ -40,7 +40,7 @@ which has the solution
 $$ \tag{4}
 \begin{pmatrix}
 2 \\ -3 \\ 0 \\ 1
-\end{pmatrix*} =
+\end{pmatrix} =
 \begin{pmatrix}
 a_3 \\ a_2 \\ a_1 \\ a_0
 \end{pmatrix}
