@@ -55,8 +55,11 @@ $$ \tag{6} \dfrac{d f^2(x)}{d x^2} = 0  \text{ if } x \in \{0,1\}$$
 which leads to the industry standard
 $$ \tag{7} f(x) = -6 x^5 + 15 x^4 - 10 x^3 + 1 $$
 
-So, that leaves us with some choices for interpolation weighting functions depending on how much computing power we want to dedicate to a smooth interpolation. Constraining more derivatives doesn't result in a smoother function. More isn't always better. There are other constraints that could be more useful, like 
-$$f(x)=1-f(1-x)$$ 
+So, that leaves us with some choices for interpolation weighting functions depending on how much computing power we want to dedicate to a smooth interpolation. Constraining more derivatives doesn't result in a smoother function. More isn't always better. There are other constraints that are much more more useful, like 
+$$ \tag{8}
+f(x)=1-f(1-x) 
+$$ 
+
 $$
 \boxed{
     f(x) = 
@@ -71,11 +74,26 @@ $$
     \end{cases}
 }
 $$
+
+#### Application
+Suppose an interpolated data value $y(x)$ needs to be calculated for a data set where $ x_0 \le x \le x_1 $, $ x_1-x_0 = d$, $y_0 = y(x_0)$, and $ y_1 = y(x_1) $. The interpolated value $y(x)$ is
+$$\tag{9}
+\begin{matrix}
+y(x) &=& \dfrac{y_0*f(\frac{x-x_0}{d})+y_1*f(\frac{x_1-x}{d})}{f(\frac{x-x_0}{d})+f(\frac{x_1-x}{d})} 
+\end{matrix}
+$$
+However, since 
+$$ \tag{10}
+f\left(\frac{x-x_0}{d}\right)=1-f\left(\frac{x_1-x}{d}\right) $$
+then
+$$ \tag{11}
+y(x)=y_1-(y_1-y_0)*f\left(\frac{x-x_0}{d}\right)
+$$
 ### 2-D
-On a 2-D regularly spaced rectangular grid, the interpolation weighting function for 1-D spaces could be adequate when applied to the distance between a test point and the four nearest neighbors with known data. The centroid of the unit square is still less than one unit of distance away from the corners of the square. This is still true in 3-D, but in 4-D, the centroid of a unit hypercube is exactly one unit away from the corners of the hypercube. As the dimensionality of a reqularly spaced grid increases, the less justifiable it is to use the 1-D weighting functions, since the 1-d formula will only cover part of the unit hypercube. Instead, it might be better to figure out a weighting formula suited for each space that covers the whole unitary space, in this case the unit square.
+On a 2-D regularly spaced rectangular grid, the interpolation weighting function for 1-D spaces could be adequate when applied to the distance between a test point and the four nearest neighbors with known data. The centroid of the unit square is still less than one unit of distance away from the corners of the square. This is still true in 3-D, but in 4-D, the centroid of a unit hypercube is exactly one unit away from the corners of the hypercube. As the dimensionality of a regularly spaced grid increases, the less justifiable it is to use the 1-D weighting functions, since the 1-D formula will only cover part of the unit hypercube. Instead, it might be better to figure out a weighting formula suited for each space that covers the whole unitary space, in this case the unit square.
 
 The edges of a unit square are 1-D spaces though, so maybe it is best if the weighting formula reduces to the 1-D formula along those edges
-$$\tag{8}
+$$\tag{12}
 \begin{matrix}
 f(x,y) & = & 1 - 6 x^5 + 15 x^4 - 10 x^3 & \text{if } x \in [0,1], y = 0 \\
 f(x,y) & = & 1 - 6 y^5 + 15 y^4 - 10 y^3 & \text{if } y \in [0,1], x = 0 \\
@@ -88,13 +106,34 @@ f(x,y) & = & 0                           & \text{if } y \in [0,1], x = 1 \\
 \end{matrix} 
 $$
 These ten constraints are satisfied by the following function and its derivatives
-$$\tag{9}
+$$\tag{13}
 \begin{matrix}
 f(x,y) &=& (1 - 6x^5 + 15x^4 - 10x^3)(1 - 6y^5 + 15y^4 - 10y^3) \\
 \dfrac{\partial f(x,y)}{\partial x} &=& (- 30x^4 + 60x^3 - 30x^3)(1 - 6y^5 + 15y^4 - 10y^3) \\
 \dfrac{\partial f(x,y)}{\partial y} &=& (1 - 6x^5 + 15x^4 - 10x^3)(-30y^4 + 60y^3 - 30y^2)
  \end{matrix}
 $$
+or in simpler terms
+$$\tag{14}
+f(x,y)=f(x)f(y)
+$$
+#### Application
+For a point $(x,y)$ where $x_0 \le x \le x_1$, $y_0 \le y \le y_1$, $ x_1-x_0 = y_1-y_0 = d$ and
+$$
+\begin{matrix}
+z(x_0,y_0)&=&z_{0,0} \\
+z(x_0,y_1)&=&z_{0,1} \\
+z(x_1,y_0)&=&z_{1,0} \\
+z(x_1,y_1)&=&z_{1,1} 
+\end{matrix}
+$$
+Then the interpolated value $z(x,y)$ is
+$$\tag{15}
+\begin{matrix}
+z(x,y) &=& \dfrac{z_{0,0}*f(\frac{x-x_0}{d})f(\frac{y-y_0}{d})+z_{0,1}*f(\frac{x-x_0}{d})f(\frac{y_1-y}{d})+z_{1,0}*f(\frac{x_1-x}{d})f(\frac{y-y_0}{d})+z_{1,1}*f(\frac{x_1-x}{d})f(\frac{y_1-y}{d})}{f(\frac{x-x_0}{d})f(\frac{y-y_0}{d})+f(\frac{x-x_0}{d})f(\frac{y_1-y}{d})+f(\frac{x_1-x}{d})f(\frac{y-y_0}{d})+f(\frac{x_1-x}{d})f(\frac{y_1-y}{d})} 
+\end{matrix}
+$$
+
 ### 3-D
 In 3-D space, a smooth interpolation weighting formula that covers the whole unit cube can be obtained by the same method as was used in the 2-D case to cover the unit cube
 $$
