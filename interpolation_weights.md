@@ -142,11 +142,11 @@ f(x,y) & = & 0                           & \text{if } y \in [0,1], x = 1 \\
 $$
 These ten constraints are satisfied by the following function and its derivatives
 $$\tag{13}
-\begin{matrix*}[l]
+\begin{matrix}
 f(x,y) &=& (1 - 6x^5 + 15x^4 - 10x^3)(1 - 6y^5 + 15y^4 - 10y^3) \\
 \dfrac{\partial f(x,y)}{\partial x} &=& (- 30x^4 + 60x^3 - 30x^3)(1 - 6y^5 + 15y^4 - 10y^3) \\
 \dfrac{\partial f(x,y)}{\partial y} &=& (1 - 6x^5 + 15x^4 - 10x^3)(-30y^4 + 60y^3 - 30y^2)
-\end{matrix*}
+\end{matrix}
 $$
 
 ![3D plot of the 2D smooth interpolator weighting function for regularly spaced rectangular grids from equation listing (9)](images/2DSmoothInterpolationWeightFunc.png "Plot of f(x,y) = (1 - 6x^5 + 15x^4 - 10x^3)(1 - 6y^5 + 15y^4 - 10y^3)")
